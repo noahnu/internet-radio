@@ -14,7 +14,6 @@ Configure and deploy an internet radio media server with minimal overhead.
 
 You can change the icecast and liquidsoap settings by overriding environment variables in the docker-compose.yml file. A table of environment variables and default values are listed below:
 
-```
 | Env Variable | Default Value |
 | ------------ | ------------- |
 | SOURCE_PASSWORD | "source_password" |
@@ -30,7 +29,6 @@ You can change the icecast and liquidsoap settings by overriding environment var
 | BURST_ON_CONNECT | 1 |
 | BURST_SIZE | 65535 |
 | DEFAULT_PORT | 8000 |
-```
 
 ## Debugging
 
