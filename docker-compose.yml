@@ -1,0 +1,6 @@
+version: "3.2"
+services:
+  mediaserver:
+    build: .
+    ports:
+      - "8000:8000"

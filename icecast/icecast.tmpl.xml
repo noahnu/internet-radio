@@ -1,0 +1,57 @@
+<icecast>
+    <location>Canada</location>
+    <admin>root@localhost</admin>
+    <limits>
+        <clients>{N_CLIENTS}</clients>
+        <sources>{N_SOURCES}</sources>
+        <queue-size>{QUEUE_SIZE}</queue-size>
+        <client-timeout>{CLIENT_TIMEOUT}</client-timeout>
+        <header-timeout>{HEADER_TIMEOUT}</header-timeout>
+        <source-timeout>{SOURCE_TIMEOUT}</source-timeout>
+        <burst-on-connect>{BURST_ON_CONNECT}</burst-on-connect>
+        <burst-size>{BURST_SIZE}</burst-size>
+    </limits>
+
+    <authentication>
+        <source-password>{SOURCE_PASSWORD}</source-password>
+        <relay-password>{RELAY_PASSWORD}</relay-password>
+        <admin-user>{ADMIN_USER}</admin-user>
+        <admin-password>{ADMIN_PASSWORD}</admin-password>
+    </authentication>
+
+    <hostname>localhost</hostname>
+
+    <listen-socket>
+        <port>{DEFAULT_PORT}</port>
+    </listen-socket>
+
+    <http-headers>
+    </http-headers>
+
+    <fileserve>1</fileserve>
+
+    <paths>
+        <basedir>/usr/share/icecast2</basedir>
+        <logdir>/var/log/icecast2</logdir>
+        <webroot>/usr/share/icecast2/web</webroot>
+        <adminroot>/usr/share/icecast2/admin</adminroot>
+        <pidfile>/usr/share/icecast2/icecast.pid</pidfile>
+        <alias source="/" destination="/status.xsl"/>
+        <!-- The certificate file needs to contain both public and private part.
+             Both should be PEM encoded.
+        <ssl-certificate>/usr/share/icecast2/icecast.pem</ssl-certificate>
+        -->
+    </paths>
+
+    <logging>
+        <accesslog>access.log</accesslog>
+        <errorlog>error.log</errorlog>
+        <loglevel>3</loglevel> <!-- 4 Debug, 3 Info, 2 Warn, 1 Error -->
+        <logsize>30000</logsize> <!-- Max size of a logfile -->
+        <logarchive>1</logarchive>
+    </logging>
+
+    <security>
+        <chroot>0</chroot>
+    </security>
+</icecast>
